@@ -35,6 +35,7 @@ img {
   --fw-light: 200;
   --fw-regular: 400;
 
+  --lh-sm: 0.8;
   --lh-base: 1;
   --lh-lg: 1.65;
 
@@ -42,6 +43,33 @@ img {
   --ls-lg: 5px;
 
   /* Spacings */
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --clr-grey-200: #d8d8d8;
+
+  --clr-blue-50: #f6fafa;
+  --clr-blue-100: #e5eaf1;
+
+  --clr-gradient-1: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
 }
 
 %text-preset-3 {
@@ -49,6 +77,36 @@ img {
   font-weight: var(--fw-light);
   line-height: var(--lh-base);
   letter-spacing: var(--ls-base);
+}
+
+%text-preset-4 {
+  font-size: var(--font-size-32);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-base);
+  letter-spacing: var(--ls-base);
+}
+
+%text-preset-5 {
+  font-size: var(--font-size-24);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-base);
+  letter-spacing: var(--ls-base);
+}
+
+%text-preset-6 {
+  font-family: var(--font-family-alata);
+  font-size: var(--font-size-15);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-lg);
+  letter-spacing: var(--ls-base);
+}
+
+%text-preset-7 {
+  font-family: var(--font-family-alata);
+  font-size: var(--font-size-14);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-sm);
+  letter-spacing: var(--ls-lg);
 }
 
 %horizontal-line {
@@ -64,6 +122,11 @@ img {
 
 body {
   font-family: 'Josefin Sans', sans-serif;
+
+  &.menu-open {
+    overflow: hidden;
+    touch-action: none;
+  }
 }
 
 .main,
@@ -194,5 +257,116 @@ body {
     &--nav-item:not(:last-child) {
       margin-bottom: 1rem;
     }
+  }
+}
+
+.hero {
+  margin-block-start: var(--spacing-1000);
+  text-align: center;
+
+  &__title {
+    margin-block-start: var(--spacing-500);
+    color: black;
+    @extend %text-preset-4;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-block-start: var(--spacing-200);
+    color: black;
+    opacity: 0.5;
+  }
+}
+
+.creations {
+  &__title {
+    margin-block-start: var(--spacing-800);
+    text-align: center;
+    text-transform: uppercase;
+    @extend %text-preset-4;
+  }
+
+  &__list {
+    margin-block-start: var(--spacing-400);
+    list-style: none;
+
+    &--item {
+      position: relative;
+      margin-block-start: var(--spacing-200);
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        @extend %text-preset-5;
+        color: white;
+        bottom: var(--spacing-200);
+        left: var(--spacing-200);
+        position: absolute;
+        z-index: 2;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-image: var(--clr-gradient-1);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.button__seeall {
+  @extend %text-preset-7;
+  margin-block-start: var(--spacing-400);
+  padding: var(--spacing-200) var(--spacing-500);
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: transparent;
+  justify-self: center;
+}
+
+.footer {
+  padding: var(--spacing-700);
+  margin-block-start: var(--spacing-1000);
+  grid-column: full;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-400);
+
+  &__nav__list {
+    list-style: none;
+    text-align: center;
+    &--item {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      &:not(:last-child) {
+        margin-block-end: var(--spacing-400);
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: var(--spacing-200);
+  }
+
+  &__copyright {
+    @extend %text-preset-6;
+    font-size: var(--font-size-14);
+    color: white;
   }
 }
