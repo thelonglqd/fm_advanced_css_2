@@ -389,6 +389,13 @@ body.menu-open {
   background-image: var(--clr-gradient-1);
   z-index: 1;
 }
+@media (min-width: 768px) {
+  .creations__list--item img {
+    aspect-ratio: 5/1;
+    -o-object-position: 50% 15%;
+       object-position: 50% 15%;
+  }
+}
 
 .button__seeall {
   margin-block-start: var(--spacing-400);
