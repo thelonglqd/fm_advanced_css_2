@@ -217,6 +217,11 @@ body.menu-open {
   background-size: cover;
 }
 @media (min-width: 90em) {
+  .header {
+    background-image: url("images/desktop/image-hero.jpg");
+  }
+}
+@media (min-width: 90em) {
   .header__container {
     display: flex;
     align-items: center;
