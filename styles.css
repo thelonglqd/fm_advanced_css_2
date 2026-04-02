@@ -396,6 +396,10 @@ body.menu-open {
        object-position: 50% 15%;
   }
 }
+.creations__button {
+  display: flex;
+  justify-content: center;
+}
 
 .button__seeall {
   margin-block-start: var(--spacing-400);

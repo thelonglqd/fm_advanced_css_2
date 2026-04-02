@@ -457,6 +457,11 @@ body {
       }
     }
   }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .button__seeall {
