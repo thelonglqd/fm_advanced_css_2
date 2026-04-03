@@ -25,7 +25,7 @@
       <div class="header__container">
         <div class="header__menu">
           <div class="header__logo">
-            <img src="images/logo.svg" alt="">
+            <a href="#home"><img src="images/logo.svg" alt="logo"></a>
           </div>
           <div class="header__hamburger">
             <input type="checkbox" id="hamburger-icon">
@@ -65,60 +65,76 @@
       <h2 class="creations__title">our creations</h2>
       <ul class="creations__list">
         <li class="creations__list--item creations__list--item--deep-earth">
-          <picture>
-            <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-deep-earth.jpg" alt="">
-          </picture>
-          <p class="text">deep <br /> earth</p>
+          <a href="#deep-earth">
+            <picture>
+              <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-deep-earth.jpg" alt="">
+            </picture>
+            <span class="text">deep <br /> earth</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--night-arcade">
-          <picture>
-            <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-night-arcade.jpg" alt="">
-          </picture>
-          <p class="text">night <br /> arcade</p>
+          <a href="#night-arcade">
+            <picture>
+              <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-night-arcade.jpg" alt="">
+            </picture>
+            <span class="text">night <br /> arcade</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--soccer-team">
-          <picture>
-            <source srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-soccer-team.jpg" alt="">
-          </picture>
-          <p class="text">soccer <br /> team vr</p>
+          <a href="#soccer-team">
+            <picture>
+              <source srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-soccer-team.jpg" alt="">
+            </picture>
+            <span class="text">soccer <br /> team vr</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item-grid">
-          <picture>
-            <source srcset="images/desktop/image-grid.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-grid.jpg" alt="">
-          </picture>
-          <p class="text">the <br /> grid</p>
+          <a href="#grid">
+            <picture>
+              <source srcset="images/desktop/image-grid.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-grid.jpg" alt="">
+            </picture>
+            <span class="text">the <br /> grid</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--from-above">
-          <picture>
-            <source srcset="images/desktop/image-from-above.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-from-above.jpg" alt="">
-          </picture>
-          <p class="text">from up <br /> above vr</p>
+          <a href="#from-above">
+            <picture>
+              <source srcset="images/desktop/image-from-above.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-from-above.jpg" alt="">
+            </picture>
+            <span class="text">from up <br /> above vr</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--borealis">
-          <picture>
-            <source srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-pocket-borealis.jpg" alt="">
-          </picture>
-          <p class="text">pocket <br /> borealis</p>
+          <a href="#borealis">
+            <picture>
+              <source srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-pocket-borealis.jpg" alt="">
+            </picture>
+            <span class="text">pocket <br /> borealis</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--curiosity">
-          <picture>
-            <source srcset="images/desktop/image-curiosity.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-curiosity.jpg" alt="">
-          </picture>
-          <p class="text">the <br /> curiosity</p>
+          <a href="#curiosity">
+            <picture>
+              <source srcset="images/desktop/image-curiosity.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-curiosity.jpg" alt="">
+            </picture>
+            <span class="text">the <br /> curiosity</span>
+          </a>
         </li>
         <li class="creations__list--item creations__list--item--fisheye">
-          <picture>
-            <source srcset="images/desktop/image-fisheye.jpg" media="(min-width: 90em)" />
-            <img src="images/mobile/image-fisheye.jpg" alt="">
-          </picture>
-          <p class="text">make it <br /> fisheye</p>
+          <a href="#fisheye">
+            <picture>
+              <source srcset="images/desktop/image-fisheye.jpg" media="(min-width: 90em)" />
+              <img src="images/mobile/image-fisheye.jpg" alt="">
+            </picture>
+            <span class="text">make it <br /> fisheye</span>
+          </a>
         </li>
       </ul>
       <div class="creations__button">
@@ -140,12 +156,20 @@
           <li class="nav__item nav__item--footer"><a href="#">Support</a></li>
         </ul>
       </nav>
-      <div class="footer__socials">
-        <img src="images/icon-facebook.svg" alt="">
-        <img src="images/icon-twitter.svg" alt="">
-        <img src="images/icon-pinterest.svg" alt="">
-        <img src="images/icon-instagram.svg" alt="">
-      </div>
+      <ul class="footer__socials">
+        <li>
+          <a href=""><img src="images/icon-facebook.svg" alt="facebook"></a>
+        </li>
+        <li>
+          <a href=""><img src="images/icon-twitter.svg" alt="twitter"></a>
+        </li>
+        <li>
+          <a href=""><img src="images/icon-pinterest.svg" alt="pinterest"></a>
+        </li>
+        <li>
+          <a href=""><img src="images/icon-instagram.svg" alt="instagram"></a>
+        </li>
+      </ul>
       <p class="footer__copyright">© 2021 Loopstudios. All rights reserved.</p>
     </footer>
   </main>

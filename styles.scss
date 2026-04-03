@@ -25,7 +25,7 @@ $breakpoint-tablet: 48em;
 
   /* Typography */
   --font-family-alata: 'Alata', sans-serif;
-  --font-family-alata: 'Josefin Sans', sans-serif;
+  --font-family-josenfin: 'Josefin Sans', sans-serif;
 
   --font-size-72: 4.5rem;
   --font-size-48: 3rem;
@@ -138,7 +138,7 @@ $breakpoint-tablet: 48em;
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--font-family-josenfin);
 
   &.menu-open {
     overflow: hidden;
@@ -152,7 +152,6 @@ body {
     text-align: center;
 
     @media (min-width: $breakpoint-tablet) {
-      display: block !important;
       justify-self: start;
     }
   }
@@ -202,8 +201,10 @@ body {
     }
 
     &--footer {
+      --default-grid-column: full;
       @media (min-width: $breakpoint-tablet) {
         flex-direction: row;
+        grid-column: --default-grid-column;
       }
     }
   }
@@ -218,6 +219,7 @@ body {
 
 .main,
 .full-width {
+  --default-grid-column: main;
   --padding-container: 2rem;
 
   display: grid;
@@ -227,7 +229,7 @@ body {
     [full-end];
 
   & > * {
-    grid-column: main;
+    grid-column: var(--default-grid-column);
   }
 
   & > .full-width {
@@ -239,7 +241,7 @@ body {
   }
 
   @media (min-width: $breakpoint-desktop) {
-    --padding-container: 6rem;
+    --padding-container: 9rem;
   }
 }
 
@@ -396,7 +398,6 @@ body {
     margin-block-start: var(--spacing-500);
     color: black;
     @extend %text-preset-4;
-    color: black;
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet) {

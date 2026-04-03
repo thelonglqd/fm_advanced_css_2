@@ -22,7 +22,7 @@ img {
   --z-index-hamburger: 20;
   /* Typography */
   --font-family-alata: 'Alata', sans-serif;
-  --font-family-alata: 'Josefin Sans', sans-serif;
+  --font-family-josenfin: 'Josefin Sans', sans-serif;
   --font-size-72: 4.5rem;
   --font-size-48: 3rem;
   --font-size-40: 2.5rem;
@@ -114,7 +114,7 @@ img {
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font-family-josenfin);
 }
 body.menu-open {
   overflow: hidden;
@@ -127,7 +127,6 @@ body.menu-open {
 }
 @media (min-width: 48em) {
   .nav--footer {
-    display: block !important;
     justify-self: start;
   }
 }
@@ -172,9 +171,13 @@ body.menu-open {
     margin-block-start: 0;
   }
 }
+.nav__list--footer {
+  --default-grid-column: full;
+}
 @media (min-width: 48em) {
   .nav__list--footer {
     flex-direction: row;
+    grid-column: --default-grid-column;
   }
 }
 .nav__item a {
@@ -184,13 +187,14 @@ body.menu-open {
 
 .main,
 .full-width {
+  --default-grid-column: main;
   --padding-container: 2rem;
   display: grid;
   grid-template-columns: [full-start] var(--padding-container) [main-start] 1fr [main-end] var(--padding-container) [full-end];
 }
 .main > *,
 .full-width > * {
-  grid-column: main;
+  grid-column: var(--default-grid-column);
 }
 .main > .full-width,
 .full-width > .full-width {
@@ -205,7 +209,7 @@ body.menu-open {
 @media (min-width: 90em) {
   .main,
   .full-width {
-    --padding-container: 6rem;
+    --padding-container: 9rem;
   }
 }
 
@@ -338,7 +342,6 @@ body.menu-open {
 }
 .hero__title {
   margin-block-start: var(--spacing-500);
-  color: black;
   color: black;
   text-transform: uppercase;
 }
