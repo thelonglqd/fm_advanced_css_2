@@ -1,5 +1,6 @@
 const checkbox = document.getElementById('hamburger-icon')
-checkbox.addEventListener('change', () => {
+
+checkbox?.addEventListener('change', () => {
   document.body.classList.toggle(
     'menu-open',
     checkbox.checked,
@@ -13,10 +14,12 @@ const desktopQuery = window.matchMedia(
 
 function handleDesktopChange(e) {
   if (e.matches) {
-    navElement.classList.remove('full-width')
+    navElement?.classList?.remove('full-width')
   } else {
-    navElement.classList.add('full-width')
+    navElement?.classList?.add('full-width')
   }
 }
 
 desktopQuery.addEventListener('change', handleDesktopChange)
+
+handleDesktopChange(desktopQuery)
