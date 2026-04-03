@@ -204,7 +204,7 @@ body {
       --default-grid-column: full;
       @media (min-width: $breakpoint-tablet) {
         flex-direction: row;
-        grid-column: --default-grid-column;
+        grid-column: var(--default-grid-column);
       }
     }
   }

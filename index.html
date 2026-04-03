@@ -20,31 +20,32 @@
 </head>
 
 <body>
-  <main class="main">
-    <header class="header full-width">
-      <div class="header__container">
-        <div class="header__menu">
-          <div class="header__logo">
-            <a href="#home"><img src="images/logo.svg" alt="logo"></a>
-          </div>
-          <div class="header__hamburger">
-            <input type="checkbox" id="hamburger-icon">
-            <label for="hamburger-icon"></label>
-          </div>
-        </div>
-        <nav class="nav nav--header full-width">
-          <ul class="nav__list nav__list--header">
-            <li class="nav__item nav__item--header"><a href="#">about</a></li>
-            <li class="nav__item nav__item--header"><a href="#">careers</a></li>
-            <li class="nav__item nav__item--header"><a href="#">events</a></li>
-            <li class="nav__item nav__item--header"><a href="#">products</a></li>
-            <li class="nav__item nav__item--header"><a href="#">support</a></li>
-          </ul>
-        </nav>
-      </div>
-      <h1 class="header__text">immersive experiences that devlier</h1>
-    </header>
 
+  <header class="header full-width">
+    <div class="header__container">
+      <div class="header__menu">
+        <div class="header__logo">
+          <a href="#home"><img src="images/logo.svg" alt="logo"></a>
+        </div>
+        <div class="header__hamburger">
+          <input type="checkbox" id="hamburger-icon">
+          <label for="hamburger-icon"></label>
+        </div>
+      </div>
+      <nav class="nav nav--header full-width">
+        <ul class="nav__list nav__list--header">
+          <li class="nav__item nav__item--header"><a href="#">about</a></li>
+          <li class="nav__item nav__item--header"><a href="#">careers</a></li>
+          <li class="nav__item nav__item--header"><a href="#">events</a></li>
+          <li class="nav__item nav__item--header"><a href="#">products</a></li>
+          <li class="nav__item nav__item--header"><a href="#">support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1 class="header__text">immersive experiences that devlier</h1>
+  </header>
+
+  <main class="main">
     <div class="hero">
       <div class="hero__image">
         <picture>
@@ -66,11 +67,13 @@
       <ul class="creations__list">
         <li class="creations__list--item creations__list--item--deep-earth">
           <a href="#deep-earth">
-            <picture>
-              <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 90em)" />
-              <img src="images/mobile/image-deep-earth.jpg" alt="">
-            </picture>
-            <span class="text">deep <br /> earth</span>
+            <figure>
+              <picture>
+                <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 90em)" />
+                <img src="images/mobile/image-deep-earth.jpg" alt="">
+              </picture>
+              <figcaption class="text">deep <br /> earth</figcaption>
+            </figure>
           </a>
         </li>
         <li class="creations__list--item creations__list--item--night-arcade">
@@ -141,7 +144,6 @@
         <button type="button" class="button__seeall">see all</button>
       </div>
     </div>
-
 
     <footer class="footer">
       <div class="footer__logo">
